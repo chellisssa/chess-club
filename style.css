@@ -108,16 +108,6 @@
     animation: rotate 60s linear infinite;
 }
 
-@keyframes rotate {
-    0% {
-        transform: rotate(0);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
 .hero-content {
     position: relative;
     z-index: 1;
@@ -156,15 +146,6 @@
     text-transform: uppercase;
     color: var(--white);
     animation: marquee 18s linear infinite;
-}
-
-@keyframes marquee {
-    from {
-        transform: translateX(0%);
-    }
-    to {
-        transform: translateX(-50%);
-    }
 }
 
 .running-line__text span {
@@ -527,6 +508,7 @@
     .hero {
         padding-top: 90px;
         height: calc(100vh - 38px);
+        min-height: 782px;
     }
 
     .hero-content {
@@ -799,5 +781,24 @@
 
     .footer {
         padding: 40px 0 60px;
+    }
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
